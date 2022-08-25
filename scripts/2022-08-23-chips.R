@@ -100,7 +100,7 @@ plt = df %>%
     #stat_regline_equation(size=4, family="Roboto Condensed") +
     labs(
         x="Year",
-        y=TeX("log_2(Millions of Transistors Produced)"),
+        y=TeX("log_2(Millions of Transistors)"),
         title="Does Moore's Law hold?",
         subtitle = subtitle,
         caption=NULL
