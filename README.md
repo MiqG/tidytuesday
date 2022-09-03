@@ -10,7 +10,7 @@ Click on the images to view their code!
         <thead>
             <tr>
                 <th>
-                    2022-08-30 | <a href="">??? Dataset</a>
+                    2022-08-30 | <a href="https://www2.ed.gov/finaid/prof/resources/data/pell-institution.html">Pell Grants</a>
                 </th>
                 <th>
                     2022-08-23 | <a href="https://chip-dataset.vercel.app/">Chips Dataset</a>
@@ -20,16 +20,16 @@ Click on the images to view their code!
         <tbody>
           <tr>
               <td width="50%">
-                <a href="" title="See Code">
+                <a href="https://github.com/MiqG/tidytuesday/blob/master/scripts/2022-08-30-pell.R" title="See Code">
                     <div align="center">
-                        <img src="" width="75%">
+                        <img src="plots/2022-08-30-pell.png" width="90%">
                     </div>
                 </a>
               </td>
               <td width="50%">
                 <a href="https://github.com/MiqG/tidytuesday/blob/master/scripts/2022-08-23-chips.R" title="See Code">
                     <div align="center">
-                        <img src="plots/2022-08-23-chips.png" width="75%">
+                        <img src="plots/2022-08-23-chips.png" width="90%">
                     </div>
                 </a>
               </td>
