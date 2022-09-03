@@ -25,7 +25,7 @@ pell = read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/m
 ## state abbreviations
 state_abbr = read_csv("http://goodcsv.com/wp-content/uploads/2020/08/us-states-territories.csv")
 ## US map with states
-sf_map = us_states %>% st_simplify(preserveTopology=TRUE, dTolerance=10000) %>% st_as_sf() # reduce resolution
+sf_map = us_states %>% st_simplify(preserveTopology=TRUE, dTolerance=500) %>% st_as_sf() # reduce resolution
 
 # preprocess data
 df = pell %>%
@@ -58,17 +58,17 @@ df = sf_map %>%
     left_join(df, by = c("NAME"="Name")) %>%
     drop_na(YEAR)
 
-nz_sfc = st_geometry(df)
-scaling_factor = 1 #13 * df %>% pull(scaling_factor)
-nz_centroid_sfc = st_centroid(nz_sfc)
-nz_scale = (nz_sfc - nz_centroid_sfc) * scaling_factor + nz_centroid_sfc
-df_scaled = st_set_geometry(df, nz_scale)
+# nz_sfc = st_geometry(df)
+# scaling_factor = 13 * df %>% pull(scaling_factor)
+# nz_centroid_sfc = st_centroid(nz_sfc)
+# nz_scale = (nz_sfc - nz_centroid_sfc) * scaling_factor + nz_centroid_sfc
+# df_scaled = st_set_geometry(df, nz_scale)
 
 # plot
 subtitle = "The **Pell Grants** are federal US grants for undergraduate students in financial need to continue their studies. Overall, across the different states, the granted amounts per recipient have increased steadily with peaks in 2010 and 2017."
 
 plt = ggplot() +
-    geom_sf(aes(geometry=geometry, fill=money_per_recipient), df_scaled, color=NA) +
+    geom_sf(aes(geometry=geometry, fill=money_per_recipient), df, color=NA) +
     facet_wrap(~YEAR, nrow=3, strip.position=) +
     scale_fill_gradient(
         low="grey80", high="tan4",
