@@ -7,6 +7,26 @@ Click on the images to view their code!
 
 <div align="center" style="background-color:red;padding:25px;">
     <table width="100%" bgcolor="red" border="0">
+       <thead>
+            <tr>
+                <th>
+                    2022-09-06 | <a href="https://rebrickable.com/downloads/">LEGO sets</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <td width="100%">
+                <a href="https://github.com/MiqG/tidytuesday/blob/master/scripts/2022-09-06-lego.R" title="See Code">
+                    <div align="center">
+                        <img src="plots/2022-09-06-lego.png" width="90%">
+                    </div>
+                </a>
+              </td>
+          </tr>
+        </tbody>
+    </table>
+    <table width="100%" bgcolor="red" border="0">
         <thead>
             <tr>
                 <th>
@@ -34,6 +54,6 @@ Click on the images to view their code!
                 </a>
               </td>
           </tr>
-        </tbody>
+        </tbody>        
     </table>
 </div>
